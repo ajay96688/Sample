@@ -14,14 +14,10 @@ export default class ExpandableHeaderComponent extends React.Component {
         let arrowClassName = "customExpandButton " + (this.state.expanded ? " expanded" : " collapsed");
         return <div>
                     <div className = "customHeaderLabel" > { this.props.displayName } </div>
-                    {
-                        this.props.displayName == 'Name' ? 
                         <div onClick = { this.expandOrCollapse.bind(this) } className = {arrowClassName}>
                             <i className = "fa fa-arrow-right"/> 
-                        </div >
-                        : null 
-                    } 
-                </div>
+                    </div > 
+               </div>
     }
 
     expandOrCollapse() {
